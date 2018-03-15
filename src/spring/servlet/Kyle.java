@@ -11,6 +11,8 @@ package spring.servlet;
  */
 public class Kyle {
 
+  public static String prefix = "Hello static ";
+
   String name;
 
   public Kyle(String name) {
