@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app>
+<web-app 
+  version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+>
 
+  <welcome-file-list>
+    <welcome-file>/jsp/index.jsp</welcome-file>
+  </welcome-file-list>
+  
   <servlet>
     <servlet-name>HelloWorld</servlet-name>
     <servlet-class>spring.servlet.controller.HelloWorld</servlet-class>
@@ -30,6 +38,26 @@
   <servlet-mapping>
     <servlet-name>LoginService</servlet-name>
     <url-pattern>/loginService</url-pattern>
+  </servlet-mapping>
+  
+  
+  <servlet>
+    <servlet-name>UserService</servlet-name>
+    <servlet-class>spring.servlet.controller.UserService</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UserService</servlet-name>
+    <url-pattern>/userService</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>SaveUserService</servlet-name>
+    <servlet-class>spring.servlet.controller.SaveUserService</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SaveUserService</servlet-name>
+    <url-pattern>/saveUserService</url-pattern>
   </servlet-mapping>
   
 </web-app>

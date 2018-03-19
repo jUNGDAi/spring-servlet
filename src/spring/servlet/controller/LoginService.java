@@ -80,7 +80,7 @@ public class LoginService extends HttpServlet {
         connection.close();
 
         req.setAttribute("user", m);
-        req.getRequestDispatcher("/hello").forward(req, resp);
+        req.getRequestDispatcher("/userService").forward(req, resp);
 
       } catch (ClassNotFoundException ex) {
         Logger.getLogger(LoginService.class.getName()).log(Level.SEVERE, null, ex);
@@ -91,7 +91,7 @@ public class LoginService extends HttpServlet {
     } else {
 
       req.setAttribute("error", "User or password not found");
-      req.getRequestDispatcher("login").forward(req, resp);
+      req.getRequestDispatcher("/jsp/index.jsp").forward(req, resp);
 
     }
 
